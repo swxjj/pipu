@@ -1,1 +1,61 @@
 # pipu
+<html>
+<head><title>feliz aniooooo amorrr!!!</title><link    rel="shortcut icon"   href="rec.png" ></head>
+<body bgcolor="#fefbe0">
+<style>
+        h1 {
+            color: #fb2f1b;
+			font-family:Helvetica;
+        }
+		#contador {
+            font-size: 46px;
+            color: #fb2f1b;
+			font-family:Helvetica;
+        }
+    </style>
+<h1 style="text-align:center; font-family:Comic Sans MS"><p style=color"#fb2f1b">Feliz Anioooo Pipu !!!! <3 :)</h1>
+<center>
+<TABLE BORDER WIDTH="70%"; BORDER CELLPADDING=1 CELLSPACING=0>
+<tr>
+<td><a href="https://youtu.be/JhiEe0YlwnI"><h2 style="text-align:center">te</h2></a></td> <td><a href="11.html"><h2 style="text-align:center">amo</h2></td> <td><a href="Postres.html"><h2 style="text-align:center">mucho</h2></td>
+</tr>
+</table><br><br>
+<h1>cuanto falta????????? ya ha pasado thoooo</h1>
+<div id="contador"></div>
+
+<script>
+    // Fecha límite: 5 de noviembre, 00:00 horas (GMT -3)
+    const fechaLimite = new Date('November 5, 2024 00:00:00 GMT-3:00').getTime();
+
+    // Actualizar el contador cada segundo
+    const intervalo = setInterval(function() {
+        // Obtener la fecha y hora actual
+        const ahora = new Date().getTime();
+
+        // Calcular la distancia entre la fecha límite y la actual
+        const distancia = fechaLimite - ahora;
+
+        // Cálculo de días, horas, minutos y segundos
+        const dias = Math.floor(distancia / (1000 * 60 * 60 * 24));
+        const horas = Math.floor((distancia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutos = Math.floor((distancia % (1000 * 60 * 60)) / (1000 * 60));
+        const segundos = Math.floor((distancia % (1000 * 60)) / 1000);
+
+        // Mostrar el resultado en el elemento con id="contador"
+        document.getElementById("contador").innerHTML = 
+            dias + "d " + horas + "h " + minutos + "m " + segundos + "s ";
+
+        // Si el contador ha terminado, mostrar un mensaje
+        if (distancia < 0) {
+            clearInterval(intervalo);
+            document.getElementById("contador").innerHTML = "es hoy!!!!!!!";
+        }
+    }, 1000);
+</script>
+<h4 style="font-family:Helvetica">hola mi amor!!! te habla cyberpipuuuu<br> pero desde donde?? que es estooo? espero que te guste <br><br><br>y descubras todo<br>que todo?<br>jeeeeeeeeeeeeeeeeeeeeeeeee</h4>
+<a href="game.html">
+<img href="game.html" src="200w.gif" width="400" height="300" style="border-style:dotted;border-width:1px;">
+</a>
+<h1><a href="2025.html">y para el año q viene? lo dejo aca....</h1>
+<div id="contador2"></div>
+</center>
