@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Texto con Fondo de Color</title>
+    <style>
+        body {
+            font-family: Helvetica; /* Fuente Helvetica */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0; /* Color de fondo de la página */
+        }
+        .texto-con-fondo {
+            background-color: rgba(219, 60, 60, 0.8); /* Fondo rojizo semi-transparente */
+            color: white; /* Color del texto */
+            padding: 20px 40px; /* Espacio alrededor del texto */
+            border-radius: 8px; /* Bordes redondeados */
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Sombra para resaltar */
+            text-align: center;
+            max-width: 600px; /* Ancho máximo del bloque */
+        }
+		.imagen {
+            position: absolute; /* Para posicionar cada imagen de manera independiente */
+            width: 100px; /* Ancho de las imágenes */
+            height: auto; /* Mantener la proporción de las imágenes */
+    </style>
+</head>
+<body>
+
+<div class="texto-con-fondo">
+helvetica es la fuente de apple y la sans serif mas iconica diria yo. bueno en este nivel que podemos rescatar, no? ya se! que te amo muchoooo y estoy muy enamoradooooo y no se como se ve este texto ahora mismo mientras escribo pero suerte con la pistaaaaaaaaaaaaaaaa te amo
+</div>
+
+<script>
+    const body = document.body;
+
+    function crearImagen() {
+        const img = document.createElement('img');
+        img.src = 'j.png'; // URL de la imagen (puedes cambiarla por tus imágenes)
+        img.className = 'imagen';
+
+        // Posicionar la imagen aleatoriamente en el ancho de la pantalla
+        const x = Math.random() * (window.innerWidth - 100); // Resto del ancho para evitar desbordamiento
+        img.style.left = `${x}px`;
+        img.style.top = `-100px`; // Comienza fuera de la vista en la parte superior
+
+        body.appendChild(img);
+
+        // Animar la caída de la imagen
+        let y = -100; // Comienza en la parte superior
+        const caer = setInterval(() => {
+            y += 5; // Velocidad de caída
+            img.style.top = `${y}px`;
+
+            // Si la imagen se sale de la vista, se elimina
+            if (y > window.innerHeight) {
+                clearInterval(caer);
+                body.removeChild(img);
+            }
+        }, 50); // Intervalo de actualización de la animación
+    }
+
+    // Crear imágenes cada 300 ms
+    setInterval(crearImagen, 300);
+</script>
+</body>
+</html>

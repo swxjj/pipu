@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>beeee</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: url('cabra.jpg'); /* Imagen de fondo */
+            background-size: cover;
+            background-position: center;
+        }
+        .boton-imagen {
+            width: 200px; /* Ancho de la imagen del botón */
+            height: auto;
+            cursor: pointer;
+			 margin-top: 500px; /* Ajusta este valor para mover el botón hacia abajo */
+        }
+		.secret {
+            width: 100px; /* Ancho de la imagen del botón */
+            height: auto;
+            cursor: pointer;
+			 margin-bottom: 90px; /* Ajusta este valor para mover el botón hacia abajo */
+			 margin-left: 400px;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Imagen que funciona como botón -->
+<img src="boton.webp" alt="Botón" class="boton-imagen" onclick="reproducirSonido()">
+<a href="https://youtu.be/9RcotaRUnvY"><img src="bg.png" alt="Botón" class="secret" onclick="reproducirSonido()"></a>
+
+<!-- Audio oculto para reproducir el sonido -->
+<audio id="sonido">
+    <source src="goat.m4a" type="audio/mpeg">
+    Tu navegador no soporta audio HTML5.
+</audio>
+
+<script>
+    // Función para reproducir el sonido
+    function reproducirSonido() {
+        const audio = document.getElementById("sonido");
+        audio.play();
+    }
+</script>
+
+</body>
+</html>
